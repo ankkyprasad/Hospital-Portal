@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  date_of_birth: 2023-05-13
+  gender: 1
+  weight: 1
+  phone_no: MyString
+  appointment_date: 2023-05-13
+  appointment_time: 2023-05-13 14:33:31
+  doctor_id: 1
+
+two:
+  first_name: MyString
+  last_name: MyString
+  date_of_birth: 2023-05-13
+  gender: 1
+  weight: 1
+  phone_no: MyString
+  appointment_date: 2023-05-13
+  appointment_time: 2023-05-13 14:33:31
+  doctor_id: 1

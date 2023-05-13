@@ -1,0 +1,73 @@
+<div class="h-full flex items-center justify-center py-12 px-4">
+  <div class="space-y-8 w-4/6">
+    <div>
+      <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow">
+      <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+        Create an Appointment
+      </h2>
+    </div>
+    <div class="rounded border-2 bg-white border-gray-200 overflow-hidden shadow-l p-5">
+      <%= form_with(model: @appointment, class: "py-8 w-3/5 mx-auto") do |f| %>
+        <div class="rounded-md shadow-sm -space-y-px">
+          <div class="grid gap-6">
+            <div class="flex col-span-12">
+              <div class="pr-8 w-1/2">
+                <%= f.label :first_name, class:"block text-sm font-medium text-gray-700" %>
+                <%= f.text_field :first_name, autofocus: true, class:"mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+              </div>
+              <div class="w-1/2">
+                <%= f.label :last_name, class:"block text-sm font-medium text-gray-700" %>
+                <%= f.text_field :last_name, autofocus: true, class:"mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+              </div>
+            </div>
+            <div class="col-span-8">
+              <%= f.label :phone_no, class:"block text-sm font-medium text-gray-700" %>
+              <%= f.text_field :phone_no, autofocus: true, class:"mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+            </div>
+            <div class="col-span-12">
+              <%= f.label :street_address, class:"block text-sm font-medium text-gray-700" %>
+              <%= f.text_field :street_address, autofocus: true, class:"mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+            </div>
+
+            <div class="flex col-span-12">
+              <div class="pr-8 w-1/2">
+                <%= f.label :city, class:"block text-sm font-medium text-gray-700" %>
+                <%= f.text_field :city, autofocus: true, class:"mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+              </div>
+              <div class="w-1/2">
+                <%= f.label :state, class:"block text-sm font-medium text-gray-700" %>
+                <%= f.text_field :state, autofocus: true, class:"mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+              </div>
+            </div>
+
+            <div class="col-span-12">
+              <%= f.label :date_of_birth, class:"block text-sm font-medium text-gray-700" %>
+              <%= f.date_field :date_of_birth, autofocus: true, class:"mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+            </div>
+
+            <div class="col-span-12">
+              <%= f.label :doctor, class: "block text-sm font-medium text-gray-700" %>
+              <%= f.select :doctor_id, @doctors, {}, { class:"mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" } %>
+            </div>
+
+            <div class="flex col-span-12">
+              <div class="pr-8 w-1/2">
+                <%= f.label :appointment_date, class:"block text-sm font-medium text-gray-700" %>
+                <%= f.date_field :appointment_date, autofocus: true, class:"mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+              </div>
+
+              <div class="w-1/2">
+                <%= f.label :appointment_time, class:"block text-sm font-medium text-gray-700" %>
+                <%= f.time_field :appointment_time, autofocus: true, class:"mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" %>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="mt-6">
+          <%= f.submit "Create", class: "group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

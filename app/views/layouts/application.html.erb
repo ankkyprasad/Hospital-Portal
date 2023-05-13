@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HospitalPortal</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.5/dist/flowbite.min.css" />
+    <%= javascript_importmap_tags %>
+  </head>
+  <body class="flex h-screen flex-col">
+    <%= render 'shared/navbar' %>
+    <section class="bg-gray-100 h-full overflow-y-auto">
+      <%= render 'shared/flash' %>
+      <%= yield %>
+    </section>
+    <script src="https://unpkg.com/flowbite@1.4.5/dist/flowbite.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+
+  </body>
+</html>

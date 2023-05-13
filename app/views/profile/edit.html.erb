@@ -1,0 +1,6 @@
+<div class="h-full flex bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 flex-col">
+  <%= render 'devise/registrations/edit', resource: current_user, resource_name: current_user %>
+  <% if @userable_type == 'Doctor' %>
+    <%= render 'doctors/edit', doctor: @userable %>
+  <% end %>
+</div>

@@ -1,0 +1,18 @@
+<div class="h-full flex bg-gray-50 py-12 px-4 flex-col">
+    <div>
+        <% if @userable_type == 'Receptionist' %>
+            <%= link_to "New Appointment", new_appointment_path,
+                class: 'text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none'
+                %>
+
+        <% end %>
+    </div>
+    <div class="w-1/2 mx-auto border-2 mt-8">
+        <%= high_chart("chart", @chart) %>
+    </div>
+
+    <div class= "grid grid-cols-2 gap-6 pt-8">
+        <%= render 'appointments/index', appointments: @appointments %>
+    </div>
+
+</div>
